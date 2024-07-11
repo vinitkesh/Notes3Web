@@ -9,7 +9,7 @@ import './App.css'
 import {BrowserRouter as Router , Routes, Route} from 'react-router-dom'
 
 const routes = (
-  <Router basename={'/Notes3Web/'}>
+  <Router basename={'/Notes3Web'}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Home />} />

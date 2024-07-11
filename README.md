@@ -37,7 +37,8 @@ export default defineConfig({
 ```jsx
 <Router basename={'/Notes3Web/'}>
     <Routes>
-      <Route path="/" element={<Home />} />
+      
+      <Route path="" element={<Home />} />
       <Route path="/dashboard" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
