@@ -1,22 +1,25 @@
 /* Define the gradient background and animation */
-body {
-  /* Base background color */
-  /* background: linear-gradient(270deg, #5bb2ff, #ffcd5a, #5bb2ff); */
-  /* background-size: 600% 600%; */
-
-  /* Apply the animation */
-  /* animation: gradientShift 15s ease infinite; */
+.add-dot-grid {
+    background-color: #a4a580;
+    background-image: radial-gradient(circle, rgb(115, 115, 115) 1px, #ececec 1px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+    position: sticky;
+    
 }
 
-/* Define the keyframes for the gradient animation */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.bg-sage {
+  background-color: #C9CBA3;
 }
+.bg-peach-yellow{
+  background-color: #FFE1A8;
+}
+
+.bg-bittersweet {
+  background-color: #E26D5C;
+}
+
+.bg-wine {
+  background-color: #723D46;
+}
+

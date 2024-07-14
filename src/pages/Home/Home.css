@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+.markdown-css {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0; /* Light text color for dark mode */
+    background-color: #1e1e1e !important; /* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.markdown-css > * {
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.markdown-css h1, .markdown-css h2, .markdown-css h3 {
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.3em;
+    color: #ffffff; /* Light color for headers */
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.markdown-css h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.markdown-css h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.markdown-css h3 {
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.markdown-css p {
+    margin-bottom: 1em;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.markdown-css code {
+    background-color: #2d2d2d !important; /* Dark background for code */
+    color: #ffb300 !important; /* Light text color */
+    /* padding: 0.2em 0.4em; Padding around the code */
+    border-radius: 8px; /* Rounded corners */
+    font-family: 'Source Code Pro', monospace; /* Monospace font for code */
+    font-size: 0.95em; /* Slightly smaller font size */
+    margin: 0 0.2em; /* Margin around code */
+    white-space: nowrap; /* Prevent wrapping of code */
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* .mardown-css code > *  > *{
+  background-color: #2d2d2d !important;
+} */
+
+.mardown-css code {
+  background-color: #2d2d2d !important;
+}
+
+.markdown-css pre {
+    background-color: #2d2d2d !important;
+    color: #000000;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+/* .markdown-css pre > *{
+    background-color: #2d2d2d !important;
+    color: #000000;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+} */
+
+
+.markdown-css blockquote {
+    border-left: 4px solid #3498db;
+    background-color: #444;
+    padding-left: 1em;
+    color: #ffc400;
+    margin: 1em 0;
+}
+
+.markdown-css ul, .markdown-css ol {
+    padding-left: 1.5em; /* Increased padding for visibility */
+    margin-bottom: 1em;
+    color: #ffffff; /* Ensure the color is set */
+}
+
+.markdown-css ul li, .markdown-css ol li {
+    margin-bottom: 0.5em;
+    list-style-position: inside; /* Ensure bullets/numbers are inside the padding */
+}
+
+.markdown-css ul li::marker {
+    color: #ffffff; /* Set the bullet color */
+}
+
+.markdown-css ol li::marker {
+    color: #ffffff; /* Set the number color */
+}
+
+.markdown-css a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.markdown-css a:hover {
+    text-decoration: underline;
+}
+
+.markdown-css img {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Add border-radius for rounded images */
+}
+
+.markdown-css table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: #333; /* Dark background for tables */
+}
+
+.markdown-css th, .markdown-css td {
+    border: 1px solid #444;
+    padding: 0.5em;
+}
+
+.markdown-css th {
+    background-color: #444;
+    color: #ffffff; /* Light text color for headers */
+}
+
+.markdown-css tr:nth-child(even) {
+    background-color: #2d2d2d;
+}

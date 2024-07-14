@@ -22,9 +22,9 @@ const ProfileInfo = ({ userInfo, onLogout }) => {
 
   return (
     <div className='flex items-center justify-center w-min'>
-       <a href="https://github.com/vinitkesh" className="rounded-full bg-green px-4 "><FaGithub fill='black' size={40}/></a>
+       <a href="https://github.com/vinitkesh" className="rounded-full bg-green px-4 "><FaGithub fill='white' size={35}/></a>
       <div
-        className={`w-12 h-12 flex items-center justify-center rounded-full bg-green-400 text-slate-950 font-bold text-xl cursor-pointer`}
+        className={`w-12 h-12 flex items-center justify-center rounded-full bg-yellow-400 text-slate-950 font-bold text-xl cursor-pointer`}
         onClick={openProfileModal}
       >
         {getInitials(userInfo?.fullName)}

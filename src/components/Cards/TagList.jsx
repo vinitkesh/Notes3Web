@@ -13,7 +13,7 @@ const TagList = ({ tags }) => {
       {tags.map((item, index) => (
         <div
           key={index}
-          className={`rounded-full px-2 py-1 ${important(item) ? "bg-red-600 text-slate-100 " : 'bg-zinc-300'} text-gray-700`}
+          className={`rounded-full px-2 py-1 ${important(item) ? "bg-red-600 text-slate-100 " : ' bg-zinc-300'} text-gray-700`}
         >
           {item.toUpperCase()}
         </div>
@@ -23,3 +23,10 @@ const TagList = ({ tags }) => {
 };
 
 export default TagList;
+
+
+
+
+
+
+

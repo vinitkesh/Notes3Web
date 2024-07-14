@@ -245,32 +245,59 @@ const Home = () => {
         )}
       </div>
 
-      <Modal
-        isOpen={openAddEditModal.isShown}
-        onRequestClose={() => setOpenAddEditModal({ isShown: false, type: 'add', data: null })}
-        style={{
-          overlay: {
-            backgroundColor: 'rgba(0,0,0,0.2)',
-            transition: 'opacity 300ms ease-in-out',
-            opacity: openAddEditModal.isShown ? 1 : 0,
-          },
-          content: {
-            transition: 'transform 500ms ease-in-out, opacity 500ms ease-in-out',
-            transform: openAddEditModal.isShown ? 'translateY(0)' : 'translateY(-20px)',
-            opacity: openAddEditModal.isShown ? 1 : 0,
-          }
-        }}
-        contentLabel="Add Note"
-        className=" z-10  bg-white rounded-md mt-14 p-5 overflow-scroll align-middle mx-auto"
-      >
-        <AddEditNotes
-          onClose={() => setOpenAddEditModal({ isShown: false, type: 'add', data: null })}
-          type={openAddEditModal.type}
-          noteData={openAddEditModal.data}
-          getAllNotes={getAllNotes}
-          showToastMsg={showToastMessage}
-        />
-      </Modal>
+
+        <Modal
+          isOpen={openAddEditModal.isShown}
+          onRequestClose={() => setOpenAddEditModal({ isShown: false, type: 'add', data: null })}
+          style={{
+            overlay: {
+              backgroundColor: 'rgba(0,0,0,0.2)',
+              transition: 'opacity 300ms ease-in-out',
+              opacity: openAddEditModal.isShown ? 1 : 0,
+            },
+            content: {
+              transition: 'transform 500ms ease-in-out, opacity 500ms ease-in-out',
+              transform: openAddEditModal.isShown ? 'translateY(0)' : 'translateY(-20px)',
+              opacity: openAddEditModal.isShown ? 1 : 0,
+              maxHeight: '80vh', // Set maximum height
+              overflowY: 'auto',  // Enable vertical scrolling
+            }
+          }}
+          contentLabel="Add Note"
+          className="w-[90%] z-10 md:w-[60%] lg:w-[40%] bg-white rounded-md mt-14 p-5 align-middle mx-auto"
+          >
+          <AddEditNotes
+            onClose={() => setOpenAddEditModal({ isShown: false, type: 'add', data: null })}
+            type={openAddEditModal.type}
+            noteData={openAddEditModal.data}
+            getAllNotes={getAllNotes}
+            showToastMsg={showToastMessage}
+          />
+          </Modal>
+
+          <Modal
+          isOpen={openMarkdownModal.isShown}
+          onRequestClose={() => setOpenMarkdownModal({ isShown: false, data: null })}
+          style={{
+            overlay: {
+              backgroundColor: 'rgba(0,0,0,0.2)',
+            },
+            content: {
+              maxHeight: '80vh', // Set maximum height
+              overflowY: 'auto',  // Enable vertical scrolling
+            }
+          }}
+          contentLabel="Markdown Preview"
+          className="sm:w-full sm-h-[80%] lg:w-[70%] lg:h-[80%] z-10 bg-white rounded-md mt-14 align-middle mx-auto"
+          >
+          <Markdown
+            onClose={() => setOpenMarkdownModal({ isShown: false, data: null })}
+            noteData={openMarkdownModal.data}
+            getAllNotes={getAllNotes}
+            showToastMsg={showToastMessage}
+          />
+        </Modal>
+
 
       <Toast
         isShown={showToastMsg.isShown}

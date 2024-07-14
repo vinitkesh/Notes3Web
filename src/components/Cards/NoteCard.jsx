@@ -38,7 +38,7 @@ const NoteCard = ({
 
   return (
     <div 
-      className={`NoteCard rounded-2xl p-10 ${isPinned ? 'bg-white border-zinc-200' : 'bg-zinc-300 border-white'} transition-all ease-in-out`}
+      className={`NoteCard rounded-2xl p-10 bg-yellow-50 justify-between flex flex-col 800 border-[1.5px] shadow hover:bg-yellow-300 cursor-pointer transition-all ease-in-out`}
       onClick={onClick} // Added onClick handler
       
     >

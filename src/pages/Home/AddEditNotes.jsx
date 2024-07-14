@@ -132,17 +132,15 @@ const handleAddNote = () => {
         { error && (<p className='text-red-500 text-xs pt-4'>{error}</p>)
         }
 
-        <Link to={`/edit/${noteData?._id}`} className="btn-primary mt-5 font-medium p-3" />
-
-        <button className="btn-primary mt-5 font-medium p-3" 
+        <button className="btn-primary mt-5 m-5 font-medium p-3 w-max" 
             onClick={handleAddNote}>
             { type === 'edit' ? 'UPDATE' : 'ADD'}      
         </button>
 
-        <button className="btn-primary mt-5 font-medium p-3"
-            onClick={handleAddNote}>
+        {/* <Link to={`/edit/${noteData?._id}`} className="btn-primary mt-5 m-5 font-medium p-3" >
             Open in MarkDown Editor
-        </button>
+        </Link> */}
+
 
         <Modal 
             isOpen={showEditor}
