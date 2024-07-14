@@ -13,6 +13,7 @@ import Sidebar from '../../components/Sidebar/Sidebar'; // Import the Sidebar co
 import Footer from '../../components/Footer/Footer';
 import SearchBar from '../../components/SearchBar/SearchBar'; // Import the SearchBar component
 import './Home.css';
+import MyModal from './MyModal';
 
 // Ensure that react-modal is initialized
 Modal.setAppElement('#root');
@@ -171,6 +172,8 @@ const Home = () => {
     );
   }
 
+  
+
   return (
     <div className='add-dot-grid'>
       {/* <button
@@ -279,24 +282,13 @@ const Home = () => {
         onClose={handleCloseToast}
       />
 
-      <Modal
-        isOpen={openMarkdownModal.isShown}
-        onRequestClose={() => setOpenMarkdownModal({ isShown: false, data: null })}
-        style={{
-          overlay: {
-            backgroundColor: 'rgba(0,0,0,0.2)',
-          },
-        }}
-        contentLabel="Markdown Preview"
-        className="sm:w-full sm-h-[80%] lg:w-[70%] lg:h-[80%] z-10 bg-white rounded-md mt-14 overflow-scroll align-middle mx-auto"
-      >
-        <Markdown
-          onClose={() => setOpenMarkdownModal({ isShown: false, data: null })}
-          noteData={openMarkdownModal.data}
-          getAllNotes={getAllNotes}
-          showToastMsg={showToastMessage}
+      <MyModal 
+        openMarkdownModal={openMarkdownModal}
+        setOpenMarkdownModal={setOpenMarkdownModal}
+        getAllNotes={getAllNotes}
+        showToastMessage={showToastMessage}
+        
         />
-      </Modal>
 
     </div>
   );

@@ -7,10 +7,9 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {oneLight} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const Markdown = ({ noteData, type, getAllNotes, onClose, showToastMsg }) => {
+const Markdown = ({ noteData, getAllNotes, onClose, showToastMsg }) => {
   const [title, setTitle] = useState(noteData?.title || '');
   const [content, setContent] = useState(noteData?.content || '');
   const [tags, setTags] = useState(noteData?.tags || []);
@@ -48,7 +47,7 @@ const Markdown = ({ noteData, type, getAllNotes, onClose, showToastMsg }) => {
           </h1>
         </div>
 
-        <div id='markdown-css' className="flex flex-col gap-2 mt-4 markdown-css border-yellow-600 border-[2px] rounded p-5 bg-zinc-800">
+        <div className="flex flex-col gap-2 mt-4 markdown-css border-yellow-600 border-[2px] rounded p-5 bg-zinc-800">
           <ReactMarkdown
             children={content}
             remarkPlugins={[remarkGfm]}
@@ -62,7 +61,6 @@ const Markdown = ({ noteData, type, getAllNotes, onClose, showToastMsg }) => {
                     language={match[1]}
                     PreTag="div"
                     className='markdown-css'
-                    
                     {...props}
                   >
                     {String(children).replace(/\n$/, '')}
@@ -80,12 +78,6 @@ const Markdown = ({ noteData, type, getAllNotes, onClose, showToastMsg }) => {
         <div className="mt-3">
           <TagList className={'scale-50'} tags={tags} />
         </div>
-
-        {/* <button
-          className="btn-primary mt-5 font-medium p-3 w-64"
-        >
-          Open In Markdown Editor
-        </button> */}
       </div>
     </div>
   );
