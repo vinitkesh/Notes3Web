@@ -49,7 +49,23 @@
 @media (min-width: 1024px) {
   .modal-content {
     width: 70%;
+    padding: 0;
   }
+  .ReactModal__Overlay{
+    padding: 0;
+  }
+
 }
+
+@media (max-width: 800px) {
+  .modal-content {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+  }
+  .ReactModal__Overlay{
+    max-height: 100%;
+  }
+} 
 
 

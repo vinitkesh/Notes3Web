@@ -40,11 +40,12 @@ const Markdown = ({ noteData, getAllNotes, onClose, showToastMsg }) => {
         <MdClose size={24} className="text-xl text-slate-400" />
       </button>
 
-      <div className="flex flex-col gap-4 p-4 h-max">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-col gap-4 p-4 h-max justify-between items-stretch ">
+        <div className="flex items-center gap-2 justify-between mr-8 ">
           <h1 className="text-2xl text-slate-950">
             {title || 'Could not load title'}
           </h1>
+          <TagList className={'scale-50'} tags={tags} />
         </div>
 
         <div className="flex flex-col gap-2 mt-4 markdown-css border-yellow-600 border-[2px] rounded p-5 bg-zinc-800">
@@ -75,9 +76,7 @@ const Markdown = ({ noteData, getAllNotes, onClose, showToastMsg }) => {
           />
         </div>
 
-        <div className="mt-3">
-          <TagList className={'scale-50'} tags={tags} />
-        </div>
+        
       </div>
     </div>
   );
